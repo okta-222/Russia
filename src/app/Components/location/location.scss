@@ -1,0 +1,65 @@
+.map {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .container {
+
+        .image {
+            position: relative;
+            text-align: right;
+            margin-right: 50px;
+            z-index: -1;
+                img {
+                    max-width: 80%;
+                    z-index: 1;
+                    border-radius: 5px;
+                }
+            }
+
+        .card {
+            background-color: rgb(255, 255, 255);
+            padding: 15px 20px;
+            margin-top: -300px;
+            margin-left: 40px;
+            z-index: 999;
+            border: 1px solid;
+            width: 200px;
+            border: none;
+            outline: none;
+            box-shadow: -2px 0px 2px 0 #e9e8e8;
+            height: 230px;
+
+            .main-txt {
+                margin-bottom: 10px;
+                h4 {
+
+                    span {
+                        color: var(--btn-color);
+                    }
+
+                }
+                p {
+                    font-size: 11px;
+                    color: #777;
+                }
+            }
+
+            .info {
+                h5{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    color: #777;
+
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+
+                .btn {
+                    width: 150px;
+                    margin-left: 7px;
+                }
+            }
+        }
+    }
+}

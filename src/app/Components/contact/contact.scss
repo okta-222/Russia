@@ -1,0 +1,36 @@
+.contact {
+
+    background-image: url("../../../shared/assets/images/44.jpg");
+    background-size: cover;
+    height: 300px;
+    margin-top: 150px;
+    padding-bottom: 100px;
+
+    .container {
+
+        .title {
+            text-align: center;
+            padding-top: 90px;
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        .butt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+
+            .btn {}
+
+            .light {
+                background-color: rgb(255, 255, 255);
+                color: #000;
+
+            }
+
+        }
+    }
+}

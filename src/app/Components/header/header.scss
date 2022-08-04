@@ -1,0 +1,269 @@
+header {
+  height: 600px;
+  background-size: cover;
+  position: relative;
+  background-image: url("../../../shared/assets/images/cover.jpg");
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.226);
+    bottom: 0;
+    left: 0;
+  }
+
+
+
+
+  .Navbar {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    >.nav-logo {
+      font-weight: 700;
+      font-size: 21px;
+      margin: 15px;
+      color: #ffffff;
+      position: relative;
+      
+
+      .span1 {
+        color: var(--btn-color);
+      }
+    }
+
+
+  .num {
+    color:var(--white-color);
+    z-index:999;
+    font-size:15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height:50px;
+    // margin-top:10px;
+
+
+    @media (max-width:777px){
+      &{
+        display:none;
+      }
+    }
+  }
+
+
+    >.nav-items {
+      >a {
+        color: #ffffff;
+        font-size: 16px;
+        text-decoration: none;
+        margin: 15px;
+        position: relative;
+        opacity: 0.9;
+        &:hover {
+          opacity: 1;
+          color:var(--btn-color);
+          transition: all 0.45s;
+          &::before {
+            width: 100%;
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0;
+          height: 2px;
+          background: var(--btn-color);
+          transition: all 0.45s;
+        }
+      }
+    }
+    >.nav-toggle {
+      display: none;
+    }
+  }
+  @media (max-width: 700px) {
+    .Navbar {
+      >.nav-items {
+        position: absolute;
+        top: 60px;
+        display: flex;
+        flex-direction: column;
+        background: #3b4da7;
+        left: 0;
+        width: 100%;
+        height: 90%;
+        transform: translateX(-100%);
+        transition: all .45s;
+        z-index: 999;
+        text-align: center;
+        >a {
+          &::before {
+            background: transparent;
+          }
+        }
+      }
+      >.nav-items.open {
+        transform: translateX(0);
+      }
+      >.nav-toggle {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+    .nav-toggle {
+      >.bar {
+        position: relative;
+        width: 32px;
+        height: 2px;
+        background: #ffffff;
+        transition: all 0.45s ease-in-out;
+        &::before {
+          content: "";
+          position: absolute;
+          height: 2px;
+          background: #ffffff;
+          border-radius: 2px;
+          transition: all 0.45s ease-in-out;
+          width: 25px;
+          transform: translateY(-8px);
+          right: 0;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          background: #ffffff;
+          border-radius: 2px;
+          transition: all 0.45s ease-in-out;
+          width: 32px;
+          transform: translateY(8px);
+        }
+      }
+    }
+    .nav-toggle.open {
+      >.bar {
+        transform: translateX(-40px);
+        background: transparent;
+        &::before {
+          width: 32px;
+          transform: rotate(45deg) translate(26px, -26px);
+        }
+        &::after {
+          transform: rotate(-45deg) translate(26px, 26px);
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+  main {
+    margin-top: 75px;
+    position: relative;
+
+    .container {
+
+      h2 {
+        color: white;
+        width: 550px;
+        font-size: 28px;
+        font-weight: 500;
+      }
+
+
+      @media (max-width: 645px) {
+
+        h2 {
+          width: 403px;
+        }
+      }
+
+      p {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: rgb(221, 221, 221);
+      }
+
+    }
+  }
+
+  section {
+    margin-top: 100px;
+    position: relative;
+
+    .container {
+
+      display: flex;
+      justify-content: flex-start;
+      gap: 50px;
+
+
+      .boxx {
+        position: relative;
+
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 1px;
+          height: 40px;
+          background-color: var(--p-color);
+          bottom: 0;
+          left: 130%;
+          transition: var(--main-transition);
+        }
+      }
+
+      .box {
+        position: relative;
+
+
+        h3 {
+          color: #fff;
+          font-size: 13px;
+          margin-bottom: 5px;
+        }
+
+        p {
+          color: #fff;
+          font-size: 9px;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
