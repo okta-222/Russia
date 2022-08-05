@@ -4,7 +4,7 @@ export type SalessProps = {
     title: string;
     text: string;
     price: string;
-  };
+  }; 
 };
 
 export default function SalesUsCard({ property }: SalessProps) {

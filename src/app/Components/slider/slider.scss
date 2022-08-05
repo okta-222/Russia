@@ -1,3 +1,81 @@
-.main {
-    background-color: black;
+.slider {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    .container{
+
+        
+            .boox {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 20px;
+                box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+                background-color: white;
+                border-radius: 6px;
+                transition: transform var(--main-transition),
+                box-shadow var(--main-transition);
+                position: relative;
+
+                    img {
+                        position: absolute;
+                        left: 15px;
+                        top: 0px;
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        border: 1px solid #777;
+                    }
+
+                    h3 {
+                        margin: 10px 0 10px;
+                        text-align: left;
+                        margin-left: 90px;
+                        font-size: 14px;
+                    }
+                    span {
+                        color: #777;
+                        margin-bottom: 10px;
+                        display: block;
+                        font-size: 10px;
+                        margin-left: 90px;
+                        margin-top: -30px;
+                    }
+                    p{
+                        line-height: 1.5;
+                        color: #777;
+                        margin-top: 10px;
+                        margin-bottom: 0;
+                        font-size: 12px;
+                        width: 260px;
+                        margin-left: 20px;
+                        text-align: left;
+                    }
+                    @media (max-width:777px) {
+                        p{
+                            width: 170px;
+                        }
+                        
+                    }
+                    @media (max-width:715px) {
+                        p{
+                            width: 160px;
+                        }
+                        
+                    }
+                    a{
+                        text-align: left;
+                        margin-left: 20px;
+                        font-size: 11px;
+                        color: var(--btn-color);
+                    }
+
+            }
+            
+
+    }
+    @media (max-width:600px) {
+        .container {
+            display: none;
+        }
+        
+    }
 }
